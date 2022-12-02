@@ -5,17 +5,27 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-export default async function (req, res) {
+/**
+ * 
+ * @param {*} request an api request object containing the author of the fake tweet
+ * @param {*} response an api response object containing the generated fake tweet
+ */
+export default async function (request, response) {
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: generatePrompt(req.body.tweetAuthor),
+    prompt: generatePrompt(request.body.tweetAuthor),
     temperature: 0.75,
     max_tokens: 100,
   });
   console.log('Result:', completion);
-  res.status(200).json({ result: completion.data.choices[0].text });
+  response.status(200).json({ result: completion.data.choices[0].text });
 }
 
+/**
+ * 
+ * @param {String} tweetAuthor the author of the fake tweet
+ * @returns the prompt to send to OpenAI to generate a fake tweet
+ */
 function generatePrompt(tweetAuthor) {
   return `Generate a full sentence fake tweet less than 280 characters long.
 

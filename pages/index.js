@@ -21,6 +21,7 @@ export default function Home() {
     setAuthorInput("");
   }
 
+  // a configuration object for the FakeTweet component
   const tweetConfig = {
     user: {
       nickname: "fakeUser",
@@ -59,7 +60,6 @@ export default function Home() {
           />
           <input type="submit" value="Generate tweets" />
         </form>
-        {/* <div className={styles.result}>{result}</div> */}
         <FakeTweet config={tweetConfig} />
       </main>
     </div>
