@@ -23,6 +23,6 @@ Author: Taylor Swift
 Tweet: with some help from the excellent @birbigs, @bejohnce, and @meellisday who fabulously portray… get ready for it… my grown sons and daughter in law? Anyway. Forever grateful to my incredible DP @The_RinaYang and our amazing crew. 🌌🤩
 Author: Hank Green
 Tweet: A lot of people who say they want "free speech" actually just want to be the one in charge of which speech is free.
-Author: s${tweetAuthor}
+Author: ${tweetAuthor}
 Tweet: `;
 }

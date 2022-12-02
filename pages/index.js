@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import styles from "./index.module.css";
+import FakeTweet from "fake-tweet";
 
 export default function Home() {
   const [authorInput, setAuthorInput] = useState("");
@@ -19,6 +20,24 @@ export default function Home() {
     setResult(data.result);
     setAuthorInput("");
   }
+
+  const tweetConfig = {
+    user: {
+      nickname: "fakeUser",
+      name: authorInput,
+      avatar: "/twitter-bird-googly-eye.svg",
+      verified: true,
+      locked: false
+    },
+    display: "default",
+    text: result ?? "Your fake tweet will appear here.",
+    image: "",
+    date: "3:32 PM · Feb 14, 1997",
+    app: "Twitter for iPhone",
+    retweets: 32000,
+    quotedTweets: 100,
+    likes: 12700
+  };
 
   return (
     <div>
@@ -40,7 +59,8 @@ export default function Home() {
           />
           <input type="submit" value="Generate tweets" />
         </form>
-        <div className={styles.result}>{result}</div>
+        {/* <div className={styles.result}>{result}</div> */}
+        <FakeTweet config={tweetConfig} />
       </main>
     </div>
   );
