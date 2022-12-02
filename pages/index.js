@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [animalInput, setAnimalInput] = useState("");
+  const [authorInput, setAuthorInput] = useState("");
   const [result, setResult] = useState();
 
   async function onSubmit(event) {
@@ -13,32 +13,32 @@ export default function Home() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ animal: animalInput }),
+      body: JSON.stringify({ tweetAuthor: authorInput}),
     });
     const data = await response.json();
     setResult(data.result);
-    setAnimalInput("");
+    setAuthorInput("");
   }
 
   return (
     <div>
       <Head>
-        <title>OpenAI Quickstart</title>
-        <link rel="icon" href="/dog.png" />
+        <title>Fake Tweet Generator</title>
+        <link rel="icon" href="/twitter-bird-googly-eye.svg" />
       </Head>
 
       <main className={styles.main}>
-        <img src="/dog.png" className={styles.icon} />
-        <h3>Name my pet</h3>
+        <img src="/twitter-bird-googly-eye.svg" className={styles.icon} />
+        <h3>Generate Fake Tweet</h3>
         <form onSubmit={onSubmit}>
           <input
             type="text"
-            name="animal"
-            placeholder="Enter an animal"
-            value={animalInput}
-            onChange={(e) => setAnimalInput(e.target.value)}
+            name="tweet-author"
+            placeholder="Enter an author for the fake tweet"
+            value={authorInput}
+            onChange={(e) => setAuthorInput(e.target.value)}
           />
-          <input type="submit" value="Generate names" />
+          <input type="submit" value="Generate tweets" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>
