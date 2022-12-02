@@ -1,7 +1,5 @@
 
-<div style="display: flex; justify-content: center">
-   <img src="./public/twitter-bird-googly-eye.svg" style="width:60px; height:60px">
-</div>
+<img src="./public/twitter-bird-googly-eye.svg" style="width:100%; height:60px">
 
 # OpenAI API Tweet Generator
 
