@@ -3,7 +3,7 @@
 
 # OpenAI API Tweet Generator
 
-This is a fake tweet generator app based on the [Pet name generator app](https://github.com/openai/openai-quickstart-node) created for the OpenAPI [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). Check out the instructions below to get the project running.
+This is a fake tweet generator app based on the [Pet name generator app](https://github.com/openai/openai-quickstart-node) created for the OpenAPI [quickstart tutorial](https://beta.openai.com/docs/quickstart). Check out the instructions below to get the project running.
 ## Setup
 
 1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/)
@@ -38,3 +38,9 @@ This is a fake tweet generator app based on the [Pet name generator app](https:/
    ```
 
 You should now be able to access the app at [http://localhost:3000](http://localhost:3000)! Feel free to modify the app to do whatever you'd like and don't forget to check out the OpenAI [tutorial](https://beta.openai.com/docs/quickstart) covering usage of the API!
+
+## Acknowledgements
+
+This project was created with the [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/).
+
+This project uses the [fake-tweet](https://github.com/lluiscamino/fake-tweet) react component by [lluiscamino](https://github.com/lluiscamino).
